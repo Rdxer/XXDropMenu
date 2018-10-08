@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'XXDropMenu_Example' do
+  pod 'XXDropMenu', :path => '../'
+
+  target 'XXDropMenu_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
