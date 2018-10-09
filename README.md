@@ -20,6 +20,10 @@ it, simply add the following line to your Podfile:
 pod 'XXDropMenu'
 ```
 
+## Img
+
+![WX20181009-155018@2x](http://o998w07un.bkt.clouddn.com/WX20181009-155018@2x.png)
+
 ## Author
 
 240302832@qq.com, Rdxer@foxmail.com
@@ -27,3 +31,5 @@ pod 'XXDropMenu'
 ## License
 
 XXDropMenu is available under the MIT license. See the LICENSE file for more info.
+
+
