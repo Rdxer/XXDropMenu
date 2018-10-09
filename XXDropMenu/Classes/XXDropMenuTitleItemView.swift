@@ -74,8 +74,8 @@ public class XXDropMenuTitleItemView: UIView,XXDropMenuTitleViewProtocol {
         indicateImageView.image = options.titleIndicateImage
     }
     
-    let title_Label = UILabel.init()
-    let indicateImageView = UIImageView.init()
+    public let title_Label = UILabel.init()
+    public let indicateImageView = UIImageView.init()
     
 }
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import XXDropMenu
 
 class ViewController: UIViewController {
 

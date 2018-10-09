@@ -72,7 +72,7 @@ public class XXDropMenuViewOptionsObject{
     public init(options:[XXDropMenuViewOptions]){
         
         let bundle = Bundle(for: XXDropMenuView.self)
-        let url = bundle.url(forResource: "XXDropMenuView", withExtension: "bundle")
+        let url = bundle.url(forResource: "XXDropMenu", withExtension: "bundle")
         let imageBundle = Bundle(url: url!)
         
 //            let checkMarkImagePath = imageBundle?.path(forResource: "checkmark_icon", ofType: "png")

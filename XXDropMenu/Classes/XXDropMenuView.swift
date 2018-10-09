@@ -55,7 +55,7 @@ public protocol XXDropMenuViewDelegate:class {
 }
 
 extension XXDropMenuViewDelegate{
-    func dropMenuView(willExpand dropMenuView:XXDropMenuView,colIndex:XXDropMenuViewIndex,isExpand:Bool)->Bool{
+    public func dropMenuView(willExpand dropMenuView:XXDropMenuView,colIndex:XXDropMenuViewIndex,isExpand:Bool)->Bool{
         return isExpand ? true : false
     }
 }

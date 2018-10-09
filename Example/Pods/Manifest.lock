@@ -1,6 +1,7 @@
 PODS:
   - SnapKit (4.0.0)
-  - XXDropMenu (0.1.0)
+  - XXDropMenu (0.1.0):
+    - SnapKit
 
 DEPENDENCIES:
   - SnapKit
@@ -16,7 +17,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  XXDropMenu: e41e65503efe7621c047586a637bdba114a23b96
+  XXDropMenu: 38f8e525ec14a24237a2f5c276a66ddc2dd075e6
 
 PODFILE CHECKSUM: 01e86950eccaa114e0a958f7b02854cf013ca8e5
 

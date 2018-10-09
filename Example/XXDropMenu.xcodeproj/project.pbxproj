@@ -9,11 +9,6 @@
 /* Begin PBXBuildFile section */
 		03289BD464ED707B8CDCF1C1 /* Pods_XXDropMenu_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CA093F29D625CCA3D9C35B /* Pods_XXDropMenu_Tests.framework */; };
 		2ED1EB68FDD903D08421B405 /* Pods_XXDropMenu_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B73AF87B356165E4EEF633C9 /* Pods_XXDropMenu_Example.framework */; };
-		3EBC2267216B53A900341EF4 /* XXDropMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC2266216B53A900341EF4 /* XXDropMenuView.swift */; };
-		3EBC226B216B5D3600341EF4 /* XXDropMenuViewOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC226A216B5D3600341EF4 /* XXDropMenuViewOptions.swift */; };
-		3EBC226D216C3D5200341EF4 /* XXDropMenuTitleItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC226C216C3D5200341EF4 /* XXDropMenuTitleItemView.swift */; };
-		3EBC226F216C448600341EF4 /* XXDropMenuView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3EBC226E216C448600341EF4 /* XXDropMenuView.bundle */; };
-		3EBC2271216C4C6F00341EF4 /* XXDropMenuOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC2270216C4C6F00341EF4 /* XXDropMenuOptionsView.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -36,11 +31,6 @@
 		034F8B15B5799C9104C608D3 /* XXDropMenu.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = XXDropMenu.podspec; path = ../XXDropMenu.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		19CA093F29D625CCA3D9C35B /* Pods_XXDropMenu_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XXDropMenu_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EA20C85B79E69C5DF79904F /* Pods-XXDropMenu_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXDropMenu_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XXDropMenu_Tests/Pods-XXDropMenu_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		3EBC2266216B53A900341EF4 /* XXDropMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XXDropMenuView.swift; sourceTree = "<group>"; };
-		3EBC226A216B5D3600341EF4 /* XXDropMenuViewOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XXDropMenuViewOptions.swift; sourceTree = "<group>"; };
-		3EBC226C216C3D5200341EF4 /* XXDropMenuTitleItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XXDropMenuTitleItemView.swift; sourceTree = "<group>"; };
-		3EBC226E216C448600341EF4 /* XXDropMenuView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XXDropMenuView.bundle; sourceTree = "<group>"; };
-		3EBC2270216C4C6F00341EF4 /* XXDropMenuOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XXDropMenuOptionsView.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* XXDropMenu_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XXDropMenu_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,18 +80,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		3EBC2263216B535A00341EF4 /* XX */ = {
-			isa = PBXGroup;
-			children = (
-				3EBC226E216C448600341EF4 /* XXDropMenuView.bundle */,
-				3EBC2266216B53A900341EF4 /* XXDropMenuView.swift */,
-				3EBC226C216C3D5200341EF4 /* XXDropMenuTitleItemView.swift */,
-				3EBC2270216C4C6F00341EF4 /* XXDropMenuOptionsView.swift */,
-				3EBC226A216B5D3600341EF4 /* XXDropMenuViewOptions.swift */,
-			);
-			name = XX;
-			sourceTree = "<group>";
-		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -126,7 +104,6 @@
 		607FACD21AFB9204008FA782 /* Example for XXDropMenu */ = {
 			isa = PBXGroup;
 			children = (
-				3EBC2263216B535A00341EF4 /* XX */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -272,7 +249,6 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				3EBC226F216C448600341EF4 /* XXDropMenuView.bundle in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,10 +326,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EBC226B216B5D3600341EF4 /* XXDropMenuViewOptions.swift in Sources */,
-				3EBC2271216C4C6F00341EF4 /* XXDropMenuOptionsView.swift in Sources */,
-				3EBC2267216B53A900341EF4 /* XXDropMenuView.swift in Sources */,
-				3EBC226D216C3D5200341EF4 /* XXDropMenuTitleItemView.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);

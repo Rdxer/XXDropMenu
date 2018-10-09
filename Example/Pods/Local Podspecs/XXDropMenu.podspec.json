@@ -18,5 +18,15 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "XXDropMenu/Classes/**/*"
+  "source_files": "XXDropMenu/Classes/**/*",
+  "resource_bundles": {
+    "XXDropMenu": [
+      "XXDropMenu/Assets/*.png"
+    ]
+  },
+  "dependencies": {
+    "SnapKit": [
+
+    ]
+  }
 }
