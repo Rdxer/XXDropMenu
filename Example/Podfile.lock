@@ -1,0 +1,23 @@
+PODS:
+  - SnapKit (4.0.0)
+  - XXDropMenu (0.1.0)
+
+DEPENDENCIES:
+  - SnapKit
+  - XXDropMenu (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SnapKit
+
+EXTERNAL SOURCES:
+  XXDropMenu:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  XXDropMenu: e41e65503efe7621c047586a637bdba114a23b96
+
+PODFILE CHECKSUM: 01e86950eccaa114e0a958f7b02854cf013ca8e5
+
+COCOAPODS: 1.5.3

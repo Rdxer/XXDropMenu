@@ -2,6 +2,7 @@ use_frameworks!
 
 target 'XXDropMenu_Example' do
   pod 'XXDropMenu', :path => '../'
+  pod 'SnapKit'
 
   target 'XXDropMenu_Tests' do
     inherit! :search_paths

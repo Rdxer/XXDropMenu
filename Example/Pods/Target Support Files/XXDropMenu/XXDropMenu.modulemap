@@ -1,0 +1,6 @@
+framework module XXDropMenu {
+  umbrella header "XXDropMenu-umbrella.h"
+
+  export *
+  module * { export * }
+}
