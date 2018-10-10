@@ -119,6 +119,7 @@ extension ViewController:XXDropMenuViewDataSource{
     }
 }
 extension ViewController:XXDropMenuViewDelegate{
+    
     func dropMenuViewAddToParent(dropMenuView: XXDropMenuView, maskView: UIView) {
         self.view.addSubview(maskView)
         maskView.snp.makeConstraints { (make) in

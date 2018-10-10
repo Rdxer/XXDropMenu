@@ -32,11 +32,11 @@ public protocol XXDropMenuViewDataSource:class {
     
     func dropMenuView(tableViewStyle dropMenuView:XXDropMenuView,colIndex:XXDropMenuViewIndex)->UITableViewStyle
     /// 返回 cell
-    func dropMenuView(dropMenuView:XXDropMenuView,cellBy tableView:UITableView, colIndex:XXDropMenuViewIndex, indexPath:IndexPath,isExpand:Bool)->UITableViewCell
+    func dropMenuView(dropMenuView:XXDropMenuView,cellBy tableView:UITableView, colIndex:XXDropMenuViewIndex, isExpand:Bool)->UITableViewCell
 }
 
 public extension XXDropMenuViewDataSource{
-    func dropMenuView(tableViewStyle dropMenuView: XXDropMenuView, colIndex: XXDropMenuViewIndex) -> UITableViewStyle {
+    public func dropMenuView(tableViewStyle dropMenuView: XXDropMenuView, colIndex: XXDropMenuViewIndex) -> UITableViewStyle {
         return dropMenuView.options.optionsViewTableViewStyleDefault
     }
 }
@@ -51,10 +51,9 @@ public protocol XXDropMenuViewDelegate:class {
     
     func dropMenuViewDidSelectItem(colIndex:XXDropMenuViewIndex)
     func dropMenuViewCancel()
-    func dropMenuView()
 }
 
-extension XXDropMenuViewDelegate{
+public extension XXDropMenuViewDelegate{
     public func dropMenuView(willExpand dropMenuView:XXDropMenuView,colIndex:XXDropMenuViewIndex,isExpand:Bool)->Bool{
         return isExpand ? true : false
     }

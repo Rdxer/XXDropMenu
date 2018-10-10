@@ -162,7 +162,7 @@ extension XXDropMenuOptionsView:UITableViewDataSource{
         
         let isEx = (dropMenuView?.dataSource.dropMenuView(dropMenuView: dropMenuView!, colIndex: t) ?? 0) > 0
         
-        return dropMenuView?.dataSource.dropMenuView(dropMenuView: dropMenuView!, cellBy: tableView, colIndex: indexPathList, indexPath: indexPath,isExpand:isEx) ?? UITableViewCell.init()
+        return dropMenuView?.dataSource.dropMenuView(dropMenuView: dropMenuView!, cellBy: tableView, colIndex: t, isExpand:isEx) ?? UITableViewCell.init()
     }
     
     
