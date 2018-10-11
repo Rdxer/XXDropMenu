@@ -45,12 +45,12 @@ public protocol XXDropMenuViewDelegate:class {
     func dropMenuViewAddToParent(dropMenuView:XXDropMenuView,maskView:UIView)
     func dropMenuViewAddToParent(dropMenuView:XXDropMenuView,optionsView:XXDropMenuOptionsView)
     
-    
     /// 根据 isExpand 返回 是否展开  true 默认依据 isExpand
     func dropMenuView(willExpand dropMenuView:XXDropMenuView,colIndex:XXDropMenuViewIndex,isExpand:Bool)->Bool
     
-    func dropMenuViewDidSelectItem(colIndex:XXDropMenuViewIndex)
-    func dropMenuViewCancel()
+    func dropMenuViewDidSelectItem(dropMenuView:XXDropMenuView,colIndex:XXDropMenuViewIndex)
+    
+    func dropMenuViewCancel(dropMenuView:XXDropMenuView)
 }
 
 public extension XXDropMenuViewDelegate{
@@ -86,6 +86,10 @@ open class XXDropMenuView: UIView {
     // MARK: - select item list
     var titleViewList:[Int:UIView] = [:]
     var selectTitleItemIndex:Int?
+    
+    public func getTitleView<T>(index:Int)->T?{
+        return titleViewList[index] as? T
+    }
     
     let lineView = UIView.init()
     

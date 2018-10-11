@@ -179,7 +179,7 @@ extension XXDropMenuOptionsView:UITableViewDataSource{
         if dropMenuView?.delegate?.dropMenuView(willExpand: dropMenuView!, colIndex: t, isExpand: isEx) == true{
             self.addSubColTableView(t,animation: true)
         }else{
-            dropMenuView?.delegate?.dropMenuViewDidSelectItem(colIndex: t)
+            dropMenuView?.delegate?.dropMenuViewDidSelectItem(dropMenuView: dropMenuView!, colIndex: t)
             dropMenuView?.hide()
         }
     }
