@@ -62,11 +62,11 @@ public extension XXDropMenuViewDelegate{
 
 open class XXDropMenuView: UIView {
     
-    public weak var dataSource:XXDropMenuViewDataSource!
+    public weak var dataSource:XXDropMenuViewDataSource?
     public weak var delegate:XXDropMenuViewDelegate?
     
     public var optionsPara:[XXDropMenuViewOptions]{
-        return dataSource.dropMenuViewOptionsPara(dropMenuView: self)
+        return dataSource?.dropMenuViewOptionsPara(dropMenuView: self) ?? []
     }
     var _options:XXDropMenuViewOptionsObject?
     public var options:XXDropMenuViewOptionsObject{
@@ -126,7 +126,10 @@ open class XXDropMenuView: UIView {
         
         _options = nil
         selectTitleItemIndex  = nil
-        
+        titleViewList.forEach { (resp) in
+            resp.value.removeFromSuperview()
+        }
+        titleViewList = [:]
         self.backgroundColor = options.titleViewBackground
         dropMenuOptionsMaskView.backgroundColor = options.optionsMaskViewBackground
         clearMakeMenu()
@@ -135,29 +138,34 @@ open class XXDropMenuView: UIView {
     
     
     func clearMakeMenu(){
-        let number = dataSource.numberByDropMenuViewTitleItem(dropMenuView: self)
+        let number = dataSource?.numberByDropMenuViewTitleItem(dropMenuView: self) ?? 0
         
         guard number > 0 else{
+            
             return
         }
         
         var lastV:UIView?
         
-        let v = dataSource.dropMenuView(dropMenuView: self, titleView: 0)
+        let v = (dataSource?.dropMenuView(dropMenuView: self, titleView: 0))!
+        
         titleViewList[0] = v
+        
         self.addSubview(v)
+        
         v.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(options.titleMargin.top)
             make.bottom.equalToSuperview().offset(options.titleMargin.bottom)
             make.left.equalToSuperview().offset(options.titleMargin.left)
         }
+        
         lastV = v
         
         for index in 1..<number {
-            let v = dataSource.dropMenuView(dropMenuView: self, titleView: index)
+            let v = dataSource?.dropMenuView(dropMenuView: self, titleView: index)
             titleViewList[index] = v
-            self.addSubview(v)
-            v.snp.makeConstraints { (make) in
+            self.addSubview(v!)
+            v?.snp.makeConstraints { (make) in
                 make.top.equalToSuperview().offset(options.titleMargin.top)
                 make.bottom.equalToSuperview().offset(options.titleMargin.bottom)
                 make.left.equalTo(lastV!.snp.right).offset(options.titleItemViewInset)

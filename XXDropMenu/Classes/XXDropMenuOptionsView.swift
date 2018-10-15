@@ -42,7 +42,7 @@ public class XXDropMenuOptionsView: UIView {
     
     fileprivate func addSubColTableView(_ indexPathList: XXDropMenuViewIndex,animation:Bool = false) {
         
-        let style = dropMenuView?.dataSource.dropMenuView(tableViewStyle: dropMenuView!, colIndex: indexPathList)
+        let style = dropMenuView?.dataSource?.dropMenuView(tableViewStyle: dropMenuView!, colIndex: indexPathList)
         
         var f = self.frame
         f.origin.x = UIScreen.main.bounds.width
@@ -146,7 +146,7 @@ extension XXDropMenuOptionsView:UITableViewDataSource{
             return 0
         }
         
-        return dropMenuView?.dataSource.dropMenuView(dropMenuView: dropMenuView!, colIndex: indexPathList) ?? 0
+        return dropMenuView?.dataSource?.dropMenuView(dropMenuView: dropMenuView!, colIndex: indexPathList) ?? 0
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -160,9 +160,9 @@ extension XXDropMenuOptionsView:UITableViewDataSource{
         
         t.append(indexPath)
         
-        let isEx = (dropMenuView?.dataSource.dropMenuView(dropMenuView: dropMenuView!, colIndex: t) ?? 0) > 0
+        let isEx = (dropMenuView?.dataSource?.dropMenuView(dropMenuView: dropMenuView!, colIndex: t) ?? 0) > 0
         
-        return dropMenuView?.dataSource.dropMenuView(dropMenuView: dropMenuView!, cellBy: tableView, colIndex: t, isExpand:isEx) ?? UITableViewCell.init()
+        return dropMenuView?.dataSource?.dropMenuView(dropMenuView: dropMenuView!, cellBy: tableView, colIndex: t, isExpand:isEx) ?? UITableViewCell.init()
     }
     
     
@@ -174,7 +174,7 @@ extension XXDropMenuOptionsView:UITableViewDataSource{
         
         var t = indexPathList
         t.append(indexPath)
-        let isEx = (dropMenuView?.dataSource.dropMenuView(dropMenuView: dropMenuView!, colIndex: t) ?? 0) > 0
+        let isEx = (dropMenuView?.dataSource?.dropMenuView(dropMenuView: dropMenuView!, colIndex: t) ?? 0) > 0
         
         if dropMenuView?.delegate?.dropMenuView(willExpand: dropMenuView!, colIndex: t, isExpand: isEx) == true{
             self.addSubColTableView(t,animation: true)
